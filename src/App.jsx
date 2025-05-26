@@ -32,6 +32,7 @@ function App() {
   console.log('전체 데이터 수:', data.length)
   console.log('한강진 필터 결과 수:', filteredData.length)
   console.log('한강진 필터 내용:', filteredData)
+  window._data = data // ← 이 줄 추가됨
 
   return (
     <div className="min-h-screen bg-blue-50 p-4">
