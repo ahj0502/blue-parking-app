@@ -26,7 +26,7 @@ function App() {
   }, [])
 
   const filteredData = data.filter(
-    (item) => item.pklt_nm?.includes('한강진')
+    (item) => item.PKLT_NM?.includes('한강진')
   )
 
   return (
@@ -37,7 +37,7 @@ function App() {
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {filteredData.map((item) => (
-          <ParkingCard key={item.pklt_nm} item={item} />
+          <ParkingCard key={item.PKLT_NM} item={item} />
         ))}
       </div>
     </div>
@@ -45,4 +45,3 @@ function App() {
 }
 
 export default App
-
