@@ -9,8 +9,9 @@ function App() {
   useEffect(() => {
     const fetchParkingData = async () => {
       try {
+        const API_KEY = '4177524e5061706c37364f4b795661'
         const res = await fetch(
-          `https://openapi.seoul.go.kr:8088/${import.meta.env.VITE_SEOUL_API_KEY}/json/GetParkInfo/1/100`
+          `https://openapi.seoul.go.kr:8088/${API_KEY}/json/GetParkInfo/1/100`
         )
         const result = await res.json()
 
@@ -49,5 +50,3 @@ function App() {
 }
 
 export default App
-
-
