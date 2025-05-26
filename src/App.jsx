@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import ParkingCard from './ParkingCard'
 import './index.css'
-import logo from './logo.png' // 로고 파일은 나중에 추가할 예정
+import logo from './logo.jpg'
 
 function App() {
   const [data, setData] = useState([])
@@ -17,10 +17,10 @@ function App() {
         if (result?.GetParkInfo?.row) {
           setData(result.GetParkInfo.row)
         } else {
-          console.warn('⚠️ API 응답에 row 없음:', result)
+          console.warn('API 응답에 row 없음:', result)
         }
       } catch (err) {
-        console.error('❌ API 요청 실패:', err)
+        console.error('API 요청 실패:', err)
       }
     }
 
@@ -49,3 +49,4 @@ function App() {
 }
 
 export default App
+
