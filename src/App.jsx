@@ -28,7 +28,9 @@ function App() {
   }, [])
 
   const filteredData = data.filter(
-    (item) => item.PARK_NM.includes('한강진') || item.PARK_NM.includes('한남')
+    (item) =>
+      item.PARK_NM &&
+      (item.PARK_NM.includes('한강진') || item.PARK_NM.includes('한남'))
   )
 
   return (
