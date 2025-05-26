@@ -14,8 +14,6 @@ function App() {
 
         if (result?.GetParkInfo?.row) {
           setData(result.GetParkInfo.row)
-        } else {
-          console.warn('API 응답에 row 없음:', result)
         }
       } catch (err) {
         console.error('API 요청 실패:', err)
@@ -28,9 +26,7 @@ function App() {
   }, [])
 
   const filteredData = data.filter(
-    (item) =>
-      item.PARK_NM &&
-      (item.PARK_NM.includes('한강진') || item.PARK_NM.includes('한남'))
+    (item) => item.pklt_nm?.includes('한강진')
   )
 
   return (
@@ -41,7 +37,7 @@ function App() {
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {filteredData.map((item) => (
-          <ParkingCard key={item.PARK_ID} item={item} />
+          <ParkingCard key={item.pklt_nm} item={item} />
         ))}
       </div>
     </div>
@@ -49,3 +45,4 @@ function App() {
 }
 
 export default App
+
