@@ -36,17 +36,5 @@ function App() {
 
   return (
     <div className="min-h-screen bg-blue-50 p-4">
-      <div className="flex items-center mb-4">
-        <img src={logo} alt="블루스퀘어 로고" className="h-10 mr-3" />
-        <h1 className="text-xl font-bold text-blue-900">실시간 주차정보</h1>
-      </div>
-      <div className="grid gap-4 md:grid-cols-2">
-        {filteredData.map((item) => (
-          <ParkingCard key={item.PARK_ID} item={item} />
-        ))}
-      </div>
-    </div>
-  )
-}
+      <
 
-export default App
